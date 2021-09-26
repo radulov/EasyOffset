@@ -5,6 +5,7 @@ namespace EasyOffset {
         PivotOnly,
         DirectionOnly,
         DirectionAuto,
+        TestPlay,
         RoomOffset
     }
 }

@@ -44,6 +44,7 @@ namespace EasyOffset {
                 AdjustmentMode.PivotOnly => "Pivot Only",
                 AdjustmentMode.DirectionOnly => "Direction Only",
                 AdjustmentMode.DirectionAuto => "Direction Auto",
+                AdjustmentMode.TestPlay => "Test play",
                 AdjustmentMode.RoomOffset => "Room offset",
                 _ => throw new ArgumentOutOfRangeException()
             };

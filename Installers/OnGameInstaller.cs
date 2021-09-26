@@ -1,4 +1,5 @@
 using EasyOffset.Configuration;
+using EasyOffset.TestPlay;
 using JetBrains.Annotations;
 using Zenject;
 
@@ -8,6 +9,12 @@ namespace EasyOffset.Installers {
 
         public override void InstallBindings() {
             Container.BindInterfacesAndSelfTo<MidPlayAdjustmentsManager>().AsSingle();
+
+            if (PluginConfig.AdjustmentMode == AdjustmentMode.TestPlay)
+            {
+                Container.BindInterfacesAndSelfTo<SliceRecorder>().AsSingle();
+            }
+
             if (!PluginConfig.EnableMidPlayAdjustment) return;
 
             var vrControllers = new VRControllers(
